@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+LABEL maintainer="github.com/tvhuyy"
+
 RUN apt-get update && apt-get install -y apache2
 
 COPY www/apache-web-81/index.html /var/www/apache-web-81/

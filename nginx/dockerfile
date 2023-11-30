@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+LABEL maintainer="github.com/tvhuyy"
+
 RUN apt-get update && apt-get install -y nginx
 RUN rm /etc/nginx/sites-available/default
 COPY web.conf /etc/nginx/sites-available/default
