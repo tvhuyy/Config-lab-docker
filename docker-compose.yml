@@ -3,7 +3,7 @@ version: '3'
 services:
   apache1:
     container_name: apache1
-    image: hh4huy/apa
+    image: hh4huy/apache2:latest
     networks:
       - apache-net
     stdin_open: true
@@ -11,7 +11,7 @@ services:
 
   apache2:
     container_name: apache2
-    image: hh4huy/apa:v1
+    image: hh4huy/apache2:v1
     networks:
       - apache-net
     stdin_open: true
@@ -19,7 +19,7 @@ services:
 
   apache3:
     container_name: apache3
-    image: hh4huy/apa:v2
+    image: hh4huy/apache2:v2
     networks:
       - apache-net
     stdin_open: true
