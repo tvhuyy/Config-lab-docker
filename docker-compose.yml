@@ -8,6 +8,7 @@ services:
       - apache-net
     stdin_open: true
     tty: true
+    restart: on-failure
 
   apache2:
     container_name: apache2
@@ -16,6 +17,7 @@ services:
       - apache-net
     stdin_open: true
     tty: true
+    restart: on-failure
 
   apache3:
     container_name: apache3
@@ -24,6 +26,7 @@ services:
       - apache-net
     stdin_open: true
     tty: true
+    restart: on-failure
 
   nginx1:
     container_name: nginx1
@@ -34,6 +37,8 @@ services:
       - "80:80"
     stdin_open: true
     tty: true
+    restart: on-failure
+    
 networks:
   apache-net:
     driver: bridge
