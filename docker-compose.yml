@@ -24,7 +24,7 @@ services:
 
   nginx1:
     container_name: nginx1
-    image: hh4huy/nginx:v1
+    image: hh4huy/nginx:latest
     networks:
       - apache-net
     ports:
