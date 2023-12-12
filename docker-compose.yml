@@ -6,8 +6,6 @@ services:
     image: hh4huy/apache2:latest
     networks:
       - apache-net
-    stdin_open: true
-    tty: true
     restart: on-failure
 
   apache2:
@@ -15,8 +13,6 @@ services:
     image: hh4huy/apache2:v1
     networks:
       - apache-net
-    stdin_open: true
-    tty: true
     restart: on-failure
 
   apache3:
@@ -24,8 +20,6 @@ services:
     image: hh4huy/apache2:v2
     networks:
       - apache-net
-    stdin_open: true
-    tty: true
     restart: on-failure
 
   nginx1:
@@ -35,8 +29,6 @@ services:
       - apache-net
     ports:
       - "80:80"
-    stdin_open: true
-    tty: true
     restart: on-failure
     
 networks:
